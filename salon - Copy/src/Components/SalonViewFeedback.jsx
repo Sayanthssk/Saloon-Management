@@ -62,7 +62,7 @@ function SalonViewFeedback() {
   useEffect(() => {
     const fetchFeedback = async () => {
       try {
-        const response = await axios.get(`http://localhost:8000/feedback/${salonId}`);
+        const response = await axios.get(`https://saloon-management-server.onrender.com/feedback/${salonId}`);
         console.log(response);
         setFeedbacks(response.data);
       } catch (err) {
