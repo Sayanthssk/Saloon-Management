@@ -148,7 +148,7 @@ function Addservices() {
   useEffect(() => {
     const fetchSalon = async () => {
       try {
-        const response = await axios.get(`http://localhost:8000/salon/${salonId}`);
+        const response = await axios.get(`https://saloon-management-server.onrender.com/salon/${salonId}`);
         setServices(response.data.services || []);
       } catch (error) {
         console.error("Error fetching salon data:", error);
@@ -160,7 +160,7 @@ function Addservices() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:8000/add-service-option', {
+      const response = await axios.post('https://saloon-management-server.onrender.com/add-service-option', {
         salonId,
         serviceName: selectService,
         newServiceOption: {
