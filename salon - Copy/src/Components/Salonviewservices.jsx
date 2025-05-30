@@ -269,7 +269,7 @@ function ViewServices() {
   useEffect(() => {
     const fetchedService = async () => {
       try {
-        const response = await axios.get(`http://localhost:8000/viewsalondata/${salonId}`);
+        const response = await axios.get(`https://saloon-management-server.onrender.com/viewsalondata/${salonId}`);
         console.log(response);
         setServices(response.data.data.services);
         setLoading(false);
