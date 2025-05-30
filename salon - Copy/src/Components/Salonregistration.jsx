@@ -305,7 +305,7 @@ function Salonregistration() {
     }
 
     try {
-      const response = await axios.post('http://localhost:8000/salonregister', salonFormData, {
+      const response = await axios.post('https://saloon-management-server.onrender.com/salonregister', salonFormData, {
         headers: { 'Content-Type': 'multipart/form-data' },
       });
       alert(response.data.message);  // Display success message
