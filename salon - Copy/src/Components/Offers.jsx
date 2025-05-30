@@ -21,7 +21,7 @@ function Offers() {
     const fetchServices = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8000/viewsalondata/${salonId}`
+          `https://saloon-management-server.onrender.com/viewsalondata/${salonId}`
         );
         console.log(response);
         
@@ -58,7 +58,7 @@ function Offers() {
       console.log(selectedServiceId);
       
       const response = await axios.post(
-        `http://localhost:8000/salons/${salonId}/services/${selectedServiceId}/offers`,
+        `https://saloon-management-server.onrender.com/salons/${salonId}/services/${selectedServiceId}/offers`,
         offerDetails
       );
       console.log("Offer added successfully:", response.data);
