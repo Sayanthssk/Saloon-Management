@@ -261,7 +261,7 @@ function Login() {
     const body = { username, password };
 
     try {
-      const response = await axios.post('http://localhost:8000/login', body);
+      const response = await axios.post('https://saloon-management-server.onrender.com/login', body);
       console.log(response);
       const logindata = response.data.login;
       console.log(logindata);
