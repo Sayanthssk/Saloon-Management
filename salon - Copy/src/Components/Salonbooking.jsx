@@ -184,7 +184,7 @@ console.log(salonId);
   useEffect(() => {
     const fetchBookings = async () => {
       try {
-        const response = await axios.get(`http://localhost:8000/bookers/${salonId}`);
+        const response = await axios.get(`https://saloon-management-server.onrender.com/bookers/${salonId}`);
         console.log(response);
         setBookings(response.data);
         setLoading(false);
