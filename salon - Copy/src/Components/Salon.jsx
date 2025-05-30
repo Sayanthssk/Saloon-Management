@@ -58,7 +58,7 @@ function Salon() {
 
   const fetchSalon = async () => {
     try {
-      const response = await axios.get(`http://localhost:8000/salonhome/${salonloginid}`);
+      const response = await axios.get(`https://saloon-management-server.onrender.com/salonhome/${salonloginid}`);
       setSalonData(response.data.salonhome);console.log(response);
       localStorage.setItem("salonobjectid",response.data.salonhome._id)
       
