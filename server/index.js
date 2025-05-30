@@ -17,7 +17,11 @@ import { log } from "console"
 const server = express()
 
 
-server.use(cors())
+server.use(cors({
+  origin: 'https://saloon-management-frontend.onrender.com',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true
+}));
 
 server.use(express.json())
 dotenv.config()
