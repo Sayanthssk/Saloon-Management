@@ -91,7 +91,7 @@ function Salon() {
           <div className="salon-info">
             <h2>{salonData.salonName}</h2>
             <img
-              src={`http://localhost:8000/uploads/${salonData.image}`}
+              src={`https://saloon-management-server.onrender.com/uploads/${salonData.image}`}
               alt={salonData.salonName}
               className="salon-image"
             />
