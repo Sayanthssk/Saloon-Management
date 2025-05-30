@@ -297,7 +297,7 @@ function Viewbeautician() {
     // Fetch beauticians from the API
     const fetchBeauticians = async () => {
       try {
-        const response = await axios.get(`http://localhost:8000/viewsalondata/${salonId}`);
+        const response = await axios.get(`https://saloon-management-server.onrender.com/viewsalondata/${salonId}`);
         console.log(response);
 
         // Check if the API response contains the expected `staffs` array
@@ -354,7 +354,7 @@ function Viewbeautician() {
                   <tr key={index}>
                     <td>
                       <img
-                        src={`http://localhost:8000/${beautician.staffImage}`} // Default placeholder image
+                        src={`https://saloon-management-server.onrender.com/${beautician.staffImage}`} // Default placeholder image
                         alt={`${beautician.name}'s profile`}
                         style={styles.image}
                       />
