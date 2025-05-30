@@ -337,7 +337,7 @@ function Addproducts() {
     try {
       console.log('Request body:', body);
       const response = await axios.post(
-        `http://localhost:8000/salons/${salonId}/products`,
+        `https://saloon-management-server.onrender.com/salons/${salonId}/products`,
         body,
         { headers: { 'Content-Type': 'application/json' } }
       );
