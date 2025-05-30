@@ -551,7 +551,7 @@ function AddBeautician() {
       if (staffImage) formData.append('staffImage', staffImage);
 
       const response = await axios.post(
-        `http://localhost:8000/salons/${salonId}/staffs`,
+        `https://saloon-management-server.onrender.com/salons/${salonId}/staffs`,
         formData,
         {
           headers: { 'Content-Type': 'multipart/form-data' },
