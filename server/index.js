@@ -5,7 +5,7 @@ import mongoose from "mongoose"
 import loginData from "./model/login.js"
 import path from 'path';
 import multer from "multer"
-import bcrypt from "bcrypt"
+import bcrypt from "bcryptjs"
 import salonData from "./model/Salon.js"
 import User from "./model/User.js"
 import Booking from "./model/Booking.js"
