@@ -1,0 +1,199 @@
+/* Global reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body and HTML */
+body, html {
+  font-family: 'Times New Roman', Times, serif; /* Set font family to Times New Roman */
+  height: 100%;
+  background-color: #f9f9f9; /* Light background color */
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: #4b3a2a; /* Darker brown */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  font-size: 18px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+}
+
+.navbar-image {
+  margin-right: 10px;
+}
+
+.navbar-brand span {
+  font-weight: bold;
+  font-size: 22px;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  width: 250px;
+  background-color: #f4f4f4;
+  position: fixed;
+  top: 60px; /* Space for the navbar */
+  left: 0;
+  height: 100vh;
+  padding-top: 20px;
+  padding-left: 20px;
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-header {
+  font-size: 24px;
+  color: #4b3a2a;
+  margin-bottom: 20px;
+}
+
+.sidebar-links {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar-links li {
+  margin: 15px 0;
+}
+
+.sidebar-links li a {
+  color: #333;
+  font-size: 18px;
+  text-decoration: none;
+  display: block;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar-links li a:hover {
+  background-color: #c6a16d;
+  color: white;
+}
+
+/* Main Content Styles */
+.page-container {
+  display: flex;
+  padding: 20px;
+  margin-left: 250px; /* Push the content to the right of the sidebar */
+  margin-top: 60px; /* Space for the navbar */
+}
+
+.main-content {
+  flex: 1;
+  background-color: #fff;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.page-heading {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Salon List Styles */
+.salon-list {
+  display: flex;
+  flex-direction: column; /* Stack the items vertically */
+  gap: 20px;
+}
+
+.salon-item {
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  display: flex;
+  flex-direction: column; /* Stack image and text vertically */
+  align-items: center; /* Center the content horizontally */
+  width: 100%; /* Make the items take full width */
+  margin-bottom: 20px;
+}
+
+.salon-item img {
+  width: 100%; /* Make image take full width of the container */
+  height: auto; /* Keep the aspect ratio */
+  object-fit: cover;
+  border-radius: 8px;
+  max-width: 300px; /* Limit image size */
+  margin-bottom: 15px;
+}
+
+.salon-details {
+  flex: 1;
+  
+}
+
+.salon-details h3 {
+  font-size: 20px;
+  color: #333;
+  margin-top: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .sidebar {
+      width: 200px;
+  }
+
+  .navbar {
+      font-size: 16px;
+  }
+
+  .page-container {
+      margin-left: 200px;
+  }
+
+  .salon-list {
+      grid-template-columns: 1fr 1fr; /* 2 items per row on medium screens */
+  }
+
+  .salon-item {
+      width: 100%; /* Adjust item width for 2 columns */
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+      width: 100%;
+      top: 60px;
+      height: auto;
+      padding-left: 10px;
+  }
+
+  .page-container {
+      margin-left: 0;
+      margin-top: 120px;
+  }
+
+  .salon-list {
+      grid-template-columns: 1fr; /* 1 item per row on small screens */
+  }
+
+  .salon-item {
+      width: 100%; /* Full width for small screens */
+  }
+}

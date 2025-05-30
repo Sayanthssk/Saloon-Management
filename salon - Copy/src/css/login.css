@@ -1,0 +1,44 @@
+body{
+     background-image: url(https://img.freepik.com/free-photo/female-hairdresser-making-hairstyle-redhead-woman-beauty-salon_176420-4482.jpg?t=st=1732099723~exp=1732103323~hmac=89e5d23fc344b3529c9fb8c77502254f44d0adf67012ffb2015d4f1bd634620a&w=996); 
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.nashfa{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    height: 90vh;
+   
+
+}
+input{
+    padding: 10px;
+    margin: 10px;
+
+
+ }
+ .card{
+    width: 400px;
+    height:350px;
+    background-color: rgb(119, 98, 58);
+    opacity: 0.6;
+    
+
+
+ }
+ h1{
+    text-align: center;
+    margin-top: 10px;
+ }
+ .space{
+    text-align: center;
+
+   
+   
+ }
+
+ button{
+    width: 100px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+ }

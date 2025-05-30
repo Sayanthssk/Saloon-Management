@@ -1,0 +1,210 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    height: 100%;
+  }
+  
+  /* Navbar Styles */
+  .navbar {
+    background-color: #8a6330b9;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: medium;
+    font-family: 'Times New Roman', Times, serif;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+  }
+  
+  .navbar-brand {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-image {
+    margin-right: 10px;
+  }
+  
+  /* salonsidebar Styles */
+  .salonsidebar {
+    width: 220px;
+    background-color: #F5F5F5;
+    padding-top: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 150vh;
+    box-shadow: 4px 0 12px rgba(0, 0, 0, 0.1);
+    /* position: fixed; */
+    top: 0;
+    left: 0;
+    z-index: 5;
+  }
+  
+  .salonsidebar-links {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .salonsidebar-links li {
+    margin: 10px 0;
+  }
+  
+  .salonsidebar-links a {
+    color: #333;
+    font-size: 18px;
+    text-decoration: none;
+    display: block;
+    padding: 8px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .salonsidebar-links a:hover {
+    background-color: #C6A16D;
+    color: #fff;
+  }
+  
+  /* Main Content Styles */
+  .salon-layout {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .main-content {
+    /* margin-left: 240px; */
+    margin-top: 60px;
+    flex: 1;
+    background-color: #f4f7fc;
+    padding: 20px;
+    overflow-y: auto;
+  }
+  
+  .salon-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .salon-info {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .salon-info h2 {
+    margin-bottom: 15px;
+  }
+  
+  .salon-info p {
+    margin-bottom: 10px;
+  }
+  
+  /* Image Styling - Full Width, Keeping Aspect Ratio */
+  .salon-image {
+    width: 100%; /* Make the image take up full width of its container */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure the image covers the space properly */
+    border-radius: 8px;
+    margin-bottom: 20px; /* Adds space below the image */
+  }
+  
+  .salon-actions {
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  /* Table Styles */
+  .table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .table th, .table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Table Header Styling */
+  .table th {
+    background-color: #f5f5dc; /* Beige background */
+    color: black;
+    font-size: 18px;
+  }
+  
+  .table td {
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .btn {
+    padding: 6px 15px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .btn-success {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .btn-danger {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .btn:hover {
+    opacity: 0.9;
+  }
+  
+  .error, .loading {
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+  }
+  
+  /* Media Queries for responsiveness */
+  @media (max-width: 768px) {
+    .salon-container {
+      flex-direction: column;
+    }
+  
+    .salon-info, .salon-actions {
+      width: 100%;
+    }
+  
+    .salonsidebar {
+      width: 200px;
+    }
+  
+    .main-content {
+      margin-left: 0;
+      margin-top: 60px;
+    }
+  
+    .salon-image {
+      height: 300px; /* Adjust the image size on mobile */
+    }
+  }
+  
