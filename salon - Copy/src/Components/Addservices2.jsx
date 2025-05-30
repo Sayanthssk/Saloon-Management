@@ -204,7 +204,7 @@ function Addservices2() {
     e.preventDefault(); // Prevent form from reloading the page
     try {
       const body = { name };
-      const response = await axios.post(`http://localhost:8000/salons/${salonId}/services`, body);
+      const response = await axios.post(`https://saloon-management-server.onrender.com/salons/${salonId}/services`, body);
       console.log(response);
       alert(response.data.message);
       navigate('/salonviewservices');
