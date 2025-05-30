@@ -49,7 +49,7 @@ function Notification() {
     const fetchServicesWithOffers = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8000/viewsalondata/${salonId}`
+          `https://saloon-management-server.onrender.com/viewsalondata/${salonId}`
         );
        console.log(response);
        
