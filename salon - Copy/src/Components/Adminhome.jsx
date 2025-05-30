@@ -208,7 +208,7 @@ function AdminHome() {
 
   const fetchSalons = async () => {
     try {
-      const response = await axios.get("http://localhost:8000/admin/salons"); // Adjust backend URL
+      const response = await axios.get("https://saloon-management-server.onrender.com/admin/salons"); // Adjust backend URL
       console.log(response);
       
       // Filter salons to only include verified ones
@@ -263,7 +263,7 @@ function AdminHome() {
               salons.map((salon) => (
                 <div key={salon._id} className="salon-card">
                   <img
-                    src={`http://localhost:8000/uploads/${salon.image}` || "https://via.placeholder.com/150"}
+                    src={`https://saloon-management-server.onrender.com/uploads/${salon.image}` || "https://via.placeholder.com/150"}
                     alt={salon.salonName}
                     className="salon-image"
                   />
