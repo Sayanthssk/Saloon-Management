@@ -303,7 +303,7 @@ function Viewproducts() {
     // Fetch products from the API
     const fetchProducts = async () => {
       try {
-        const response = await axios.get(`http://localhost:8000/viewsalondata/${salonId}`);
+        const response = await axios.get(`https://saloon-management-server.onrender.com/viewsalondata/${salonId}`);
         console.log(response);
 
         setProducts(response.data.data.products);
