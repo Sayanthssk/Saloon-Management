@@ -40,7 +40,7 @@ function ViewUsers() {
 
   const fetchUsers = async () => {
     try {
-      const response = await axios.get("http://localhost:8000/users"); // Adjust backend URL if needed
+      const response = await axios.get("https://saloon-management-server.onrender.com/users"); // Adjust backend URL if needed
       console.log(response);
       setUsers(response.data);
     } catch (error) {
@@ -66,7 +66,7 @@ function ViewUsers() {
               <tr key={user._id}>
                 <td>
                   <img
-                    src={`http://localhost:8000/uploads/${user.image}` || "https://via.placeholder.com/50"}
+                    src={`https://saloon-management-server.onrender.com/uploads/${user.image}` || "https://via.placeholder.com/50"}
                     alt={user.username}
                     className="profile-image"
                   />
