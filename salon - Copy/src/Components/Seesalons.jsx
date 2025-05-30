@@ -160,7 +160,7 @@ function Seesalons() {
   // Fetch salons data
   const fetchSalons = async () => {
     try {
-      const response = await axios.get('http://localhost:8000/admin/salons');
+      const response = await axios.get('https://saloon-management-server.onrender.com/admin/salons');
       console.log(response);
       
       setSalons(response.data.salons);
@@ -177,7 +177,7 @@ function Seesalons() {
   const toggleVerify = async (salonId, currentVerify) => {
     try {
       const response = await axios.put(
-        `http://localhost:8000/verifysalons/${salonId}`,
+        `https://saloon-management-server.onrender.com/verifysalons/${salonId}`,
         { verify: !currentVerify } // Sending `false` if currentVerify is `true`
       );
       console.log(response.data.message);
